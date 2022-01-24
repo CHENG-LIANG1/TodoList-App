@@ -23,7 +23,7 @@ class CategoryViewController: UIViewController {
         let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonPressed(sender:)))
 
         navigationItem.rightBarButtonItems = [add]
-
+        view.backgroundColor = .white
         self.title = "Category"
         
         categoryTableView.delegate = self
@@ -82,6 +82,10 @@ class CategoryViewController: UIViewController {
         categoryTableView.reloadData()
     }
     
+    
+    
+
+    
 }
 
 extension CategoryViewController:UITableViewDelegate, UITableViewDataSource{
@@ -97,5 +101,12 @@ extension CategoryViewController:UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let itemVC = ToDoListViewController()
+        itemVC.selectedCategory = cateArray[indexPath.row]
+        self.navigationController?.pushViewController(itemVC, animated: false)
     }
+    
+    
+
+
 }

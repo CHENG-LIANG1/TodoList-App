@@ -55,7 +55,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Qe6-47-wgY"/>
                     <connections>
-                        <segue destination="aNp-bS-zY1" kind="show" id="uaN-cw-NBW"/>
+                        <segue destination="aNp-bS-zY1" kind="show" identifier="goToItems" id="uaN-cw-NBW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n4k-VF-edN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
